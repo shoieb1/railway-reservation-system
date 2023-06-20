@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+  }
+
+  
+/*The "Submit" Text*/
+.submit {
+    color: black;
+    position: absolute;
+    margin-top: -14px;
+    margin-left: 6px;
+    font-family: Comic Sans MS;
+  }
+  
+  /*What happens when you click the text*/
+  submit:focus {
+    color: white;
+    animation-name: submittext;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  /*Animation when you click the text*/
+  @keyframes submittext {
+    0% {color: rgb(233, 22, 22); innerHTML="Submit"}
+    90% {color: white; innerHTML="Done!"}
+    100% {color: white; innerHTML="Done!"}
+  }
+  
+  /*Outline of the Button*/
+  .outline {
+    color: black;
+    width: 100px;
+    height: 50px;
+    border: 5px solid;
+  }
+  
+  /*The Main Button Part*/
+  .button {
+    position: relative;
+    /*Feel free to change this position part*/
+    margin-top: 250px;
+    margin-left: 240px;
+    background-color: gray;
+    /*End of position part*/
+    width: 100px;
+    height: 50px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+  }
+  
+  /*What happens when you hover on button*/
+  button:hover {
+    background-color: white;
+  }
+  
+  /*What happens when you click on button*/
+  button:focus {
+    background-color: rgb(225, 135, 135);
+    animation-name: submitanimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  /*Animation when you click button*/
+  @keyframes submitanimation {
+    0% {width: 100px; height: 50px; transform: rotate(0deg); margin-top: 250px;}
+    /*10% {width: 100px; height: 50px; transform: rotate(36deg);  margin-top: 250px; margin-left: 150;}
+    20% {width: 100px; height: 50px; transform: rotate(72deg);  margin-top: 250px; margin-left: 150;}*/
+    
+    /*MARGIN-LEFT 40PX DIFFERENCE*/
+    25% {width: 100px; height: 50px; transform: rotate(90deg);  margin-top: 300px;}
+    /*30% {width: 100px; height: 50px; transform: rotate(108deg);  margin-top: 250px; margin-left: 150;}
+    40% {width: 100px; height: 50px; transform: rotate(144px);  margin-top: 250px; margin-left: 150;}*/
+    
+    /*MARGIN-LEFT 20PX DIFFERENCE, MARGIN-TOP 40PX DIFFERENCE*/
+    50% {width: 100px; height: 50px; transform: rotate(180deg);  margin-top: 250px;}
+    /*60% {width: 100px; height: 50px; transform: rotate(216deg);  margin-top: 250px; margin-left: 150;}
+    70% {width: 100px; height: 50px; transform: rotate(252deg);  margin-top: 250px; margin-left: 150;}*/
+    
+    /*MARGIN-LEFT 20PX DIFFERENCE, MARGIN-TOP 40PX DIFFERENCE*/
+    75% {width: 100px; height: 50px; transform: rotate(270deg);  margin-top: 200px;}
+    /*80% {width: 100px; height: 50px; transform: rotate(288deg);  margin-top: 250px; margin-left: 150;}
+    90% {width: 100px; height: 50px; transform: rotate(324deg); margin-top: 250px; margin-left: 150;}*/
+    
+    /*MARGIN-LEFT 40PX DIFFERENCE*/
+    100% {width: 100px; height: 50px; transform: rotate(360deg); margin-top: 250px;} 
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-family: "Roboto", Arial;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #0D0F18;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
+  body .twitter {
+    position: fixed;
+    display: block;
+    right: 64px;
+    bottom: 14px;
+  }
+  body .twitter svg {
+    width: 32px;
+    height: 32px;
+    fill: #1da1f2;
+  }
+  .container {
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .rating {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row-reverse;
+    height: 150px;
+    position: relative;
+  }
+  
+  .rating-0 {
+    filter: grayscale(100%);
+  }
+  
+  .rating > input {
+    display: none;
+  }
+  
+  .rating > label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-top: auto;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23e3e3e3' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 76%;
+    transition: 0.3s;
+  }
+  
+  .rating > input:checked ~ label,
+  .rating > input:checked ~ label ~ label {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23fcd93a' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+  }
+  
+  .rating > input:not(:checked) ~ label:hover,
+  .rating > input:not(:checked) ~ label:hover ~ label {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23d8b11e' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+  }
+  
+  .emoji-wrapper {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .emoji-wrapper:before,
+  .emoji-wrapper:after {
+    content: "";
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .emoji-wrapper:before {
+    top: 0;
+    background: linear-gradient(to bottom, white 0%, white 35%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .emoji-wrapper:after {
+    bottom: 0;
+    background: linear-gradient(to top, white 0%, white 35%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .emoji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+  }
+  
+  .emoji > svg {
+    margin: 15px 0;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+  
+  #rating-1:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-100px);
+  }
+  
+  #rating-2:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-200px);
+  }
+  
+  #rating-3:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-300px);
+  }
+  
+  #rating-4:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-400px);
+  }
+  
+  #rating-5:checked ~ .emoji-wrapper > .emoji {
+    transform: translateY(-500px);
+  }
+  
+  .feedback {
+    max-width: 360px;
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  }

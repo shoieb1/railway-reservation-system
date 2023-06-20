@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Train Ticket Booking</title>
+  <link rel="stylesheet" type="text/css" href="CSS/sample booking 5.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <script src="js/sample booking 5.js"></script>
+</head>
+<body>
+  <header>
+    <input type='checkbox' id='toggle' style='display:none;' />
+    <label class='toggle-btn toggle-btn__cross' for='toggle'>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Train Ticket Booking</h1>
+
+    <div id="coachSelection">
+      <label for="coach">Select Coach:</label>
+      <select id="coach"required>
+        <option value="">select coach</option>
+        <option value="A">2S</option>
+        <option value="B">CC</option>
+        <option value="D">SL</option>
+        <option value="E">1A</option>
+        <option value="F">2A</option>
+        <option value="G">3A</option>
+      </select>
+    <br><br>
+    </div>
+    <div id="numberSelection">
+      <label for="number">Select Number of Passengers (max 6):</label>
+      <input type="number" id="number" min="1" max="6">
+      <button onclick="addPassengerFields()">Add Passengers</button>
+    </div>
+
+    <div id="passengerDetails">
+      <h2>Passenger Details</h2>
+
+      
+    </div>
+
+    <div id="submitBtn" style="display: HELLO;">
+        <form action="payments.html">
+        <button onclick="submitForm()">PROCEED TO PAY</button>
+        
+        </form>
+    </div>
+  </div>
+  
+</body>
+</html>
